@@ -4,7 +4,10 @@
 
 
 function getCats(que) {
-  return fetch(`https://api.thecatapi.com/v1/images/${que}`)
+  return fetch(`https://api.thecatapi.com/v1/images/${que}`, {
+    method: "GET",
+    cors: "no-cors"
+  })
     .then((response) => {
       if (!response.ok) {
         throw new Error('Server communication is not ready Meow.');

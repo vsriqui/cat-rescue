@@ -1,4 +1,5 @@
 import Cards from './Cards';
+import SearchBreed from './SearchBreeds';
 import './Home.css';
 
 function Home({cats}) {
@@ -8,6 +9,7 @@ function Home({cats}) {
     <div className='all'>
       <nav>
         <h1> Cat Rescue </h1>
+        <SearchBreed />
       </nav>
     <main>
       <Cards

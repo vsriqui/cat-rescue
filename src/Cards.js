@@ -1,8 +1,9 @@
+import './Cards.css';
 import Card from './Card'
 
 function Cards({cats}) {
   console.log(cats, 'Cards')
-  return cats.map( cats => {
+  const catsMap = cats.map( cats => {
     return(
       
       <Card
@@ -19,6 +20,12 @@ function Cards({cats}) {
   
   )
 
+
+  return (
+    <div className='cats'>
+      {catsMap}
+    </div>
+  )
 }
 
 

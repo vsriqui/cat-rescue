@@ -1,0 +1,7 @@
+.cats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+ width: 100vw;
+ min-height: 75vw;
+}

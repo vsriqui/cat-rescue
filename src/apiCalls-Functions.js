@@ -6,7 +6,9 @@
 function getCats(que) {
   return fetch(`https://api.thecatapi.com/v1/images/${que}`, {
     method: "GET",
-    cors: "no-cors"
+    cors: "no-cors",
+    
+
   })
     .then((response) => {
       if (!response.ok) {
@@ -17,7 +19,7 @@ function getCats(que) {
 }
 
 function malformedCats(data) {
-  return data.filter((cat)=>  cat.id && cat.url && cat.breeds && cat.breeds[0].name)
+  return data.filter((cat)=>  cat.id && cat.url && cat.breeds)
 }
 
 function mapCats(data) {

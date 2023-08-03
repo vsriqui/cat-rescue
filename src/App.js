@@ -15,12 +15,14 @@ function App() {
   // ''
 
   useEffect(() => {
+    
+
     const fetchCats = () => {
       getCats('search?limit=10&has_breeds=1&order=ASC&api_key=sNw9kk1ppt2nofxJ8GLOdkJzKycbk6iOmsQsydl8v4rRmaPkXomMGWamZwmhkH4y')
         .then((bigMeow) => Promise.all(mapCats(bigMeow)))
         .then((catData) => malformedCats(catData))
         .then((catData) => setCats(catData))
-        .catch((hisss) => alert(hisss));
+        .catch((hisss) => alert(hisss.message));
     };
     fetchCats();
   }, [])

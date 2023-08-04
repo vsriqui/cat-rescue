@@ -1,14 +1,14 @@
 import './Cards.css';
 import Card from './Card'
 
-function Cards({ cats, breedState }) {
+function Cards({ cats, breedState, whiskerHunt}) {
   // console.log(cats.breeds)
   const lowerCaseBreedState = breedState.toLowerCase();
 
   const washCats = breedState ? cats.filter((cat) => cat.breeds.some((breed) => breed.name.toLowerCase().includes(lowerCaseBreedState))) : cats;
 
   const catsMap = washCats.map((cat) => (
-    <Card key={cat.id} id={cat.id} url={cat.url} breeds={cat.breeds} />
+    <Card key={cat.id} id={cat.id} url={cat.url} breeds={cat.breeds} whiskerHunt={whiskerHunt} cats={cats}/>
   ));
 
   return (

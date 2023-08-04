@@ -6,7 +6,7 @@ function Error({error}) {
     error ?
     <h2>{ error }</h2>
     :
-    <h2> 'You chose an erroneous path.' </h2>
+    <h2> 'These are not the cats you\'re looking for.' </h2>
   )
 } 
 

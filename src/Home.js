@@ -1,11 +1,9 @@
 import Cards from './Cards';
 import SearchBreed from './SearchBreeds';
 import './Home.css';
-import { useState } from 'react';
-// import { useSearchParams } from 'react-router-dom';
 
-function Home({cats, breedState, handleKittyChange}) {
-  // console.log(cats)
+function Home({cats, breedState, handleKittyChange, whiskerHunt}) {
+
   return (
     <div className='all'>
       <nav>
@@ -13,7 +11,7 @@ function Home({cats, breedState, handleKittyChange}) {
         <SearchBreed handleKittyChange={handleKittyChange} breedState={breedState}/>
       </nav>
       <main>
-        <Cards cats={cats} breedState={breedState} />
+        <Cards cats={cats} breedState={breedState} whiskerHunt={whiskerHunt}/>
       </main>
     </div>
   )

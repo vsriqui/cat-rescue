@@ -1,7 +1,4 @@
-import { useState } from 'react';
 import './SearchBreed.css'
-
-
 
 const SearchBreed = ({handleKittyChange, breedState}) => {
 

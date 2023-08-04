@@ -1,8 +1,12 @@
 
 
-function Error() {
+function Error({error}) {
+  console.log(error, 'zzz')
   return (
-    <h2> No bueno</h2>
+    error ?
+    <h2>{ error }</h2>
+    :
+    <h2> 'You chose an erroneous path.' </h2>
   )
 } 
 

@@ -4,31 +4,23 @@ import './Home.css';
 import { useState } from 'react';
 // import { useSearchParams } from 'react-router-dom';
 
-function Home({cats}) {
+function Home({cats, breedState, handleKittyChange}) {
   
 
-  const [kittyState, setKittyState] = useState('');
 
-  // Function to handle state update in the parent component
-  const handleKittyChange = (newState) => {
-    setKittyState(newState);
-  };
 
-  // console.log(kittyState, 'aaaaa')
+
 
   return (
     <div className='all'>
       <nav>
         <h1> Cat Rescue </h1>
-        <SearchBreed handleKittyChange={handleKittyChange} kittyState={kittyState}/>
+        <SearchBreed handleKittyChange={handleKittyChange} breedState={breedState}/>
       </nav>
-    <main>
-      <Cards
-      cats={cats}
-      kittyState={kittyState}
-      />
-    </main>
-  </div>
+      <main>
+        <Cards cats={cats} breedState={breedState} />
+      </main>
+    </div>
   )
 } 
 

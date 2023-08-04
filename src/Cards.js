@@ -1,11 +1,11 @@
 import './Cards.css';
 import Card from './Card'
 
-function Cards({cats, kittyState}) {
+function Cards({cats, breedState}) {
 
-  const lowerCaseKittyState = kittyState.toLowerCase()
+  const lowerCaseBreedState = breedState.toLowerCase()
 
-  const washCats = kittyState ? cats.filter((cat) => cat.breeds[0].name.toLowerCase().includes(lowerCaseKittyState)) : cats;
+  const washCats = breedState ? cats.filter((cat) => cat.breeds[0].name.toLowerCase().includes(lowerCaseBreedState)) : cats;
 
   const catsMap = washCats.map((cat) => (
     <Card 

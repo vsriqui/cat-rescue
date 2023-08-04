@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import './SearchBreed.css'
 
-const SearchBreed = ({handleKittyChange, kittyState}) => {
+
+
+const SearchBreed = ({handleKittyChange, breedState}) => {
 
   const handledBreedChange = (event) => {
     
@@ -15,15 +18,17 @@ const SearchBreed = ({handleKittyChange, kittyState}) => {
   }
 
   return (
-    <form>
+    <div className='formdiv'>
+    <form className='form'>
       <input
         type="text"
-        value={kittyState}
+        value={breedState}
         onChange={handledBreedChange}
         onKeyDown={noEnter}
         placeholder="Enter preferred breed."
       />
     </form>
+    </div>
   );
 };
 

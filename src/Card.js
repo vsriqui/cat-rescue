@@ -6,14 +6,15 @@ function Card({breeds, url, id}) {
   const catNames = require('cat-names')
 
   return (
-    <div>
+    <div className='catainer'>
       <div className='cat' >
         <img src={url}></img>
       </div>
-      <h2>{catNames.random()}</h2>
+
     </div>
   )
 }
 
+// '<h2>{catNames.random()}</h2>'
 
 export default Card;

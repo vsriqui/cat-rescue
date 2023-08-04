@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import './App.css';
 import {getCats, malformedCats, mapCats} from './apiCalls-Functions'
@@ -12,8 +12,12 @@ function App() {
 
   const [cats, setCats] = useState([]);
   const [error, setError] = useState('');
+  const [breedState, setBreedState] = useState('');
 
-  // ''
+
+  const handleKittyChange = (newState) => {
+    setBreedState(newState);
+  };
 
   useEffect(() => {
     const fetchCats = () => {
@@ -25,24 +29,21 @@ function App() {
           setError(''); // Clear the error if fetch is successful
         })
         .catch((hisss) => setError(hisss.message));
+        
     };
-    fetchCats();
+    fetchCats(); 
   }, []);
 
-
   if (error) {
-    return <Error />;
+    console.log('aaaaaa', error)
+    return <Error error={error} />;
   }
 
-
-
   return (
-
     <Routes>
-      <Route exact path='/' element={<Home cats={cats}/>} />
+      <Route path='/' element={<Home cats={cats} breedState={breedState} handleKittyChange={handleKittyChange} />} />
       <Route path='*' element={<Error />}/>
     </Routes>
-
   );
 }
 

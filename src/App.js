@@ -36,15 +36,16 @@ function App() {
     fetchCats(); 
   }, []);
 
-  if (error) {
-    console.log('aaaaaa', error)
-    return <Error error={error} />;
-  }
+  // if (error) {
+  //   console.log('aaaaaa', error)
+  //   return <Error error={error} />;
+  // }
 
   return (
     <Routes>
-      <Route path='/' element={<Home cats={cats} breedState={breedState} handleKittyChange={handleKittyChange} />} />
-      <Route path='*' element={<Error />}/>
+      { !error && <Route path='/' element={<Home cats={cats} breedState={breedState} handleKittyChange={handleKittyChange} />} />}
+      <Route path='/home/:id' element={<Error />} />
+      <Route path='*' element={<Error error={error}/>}/>
     </Routes>
   );
 }

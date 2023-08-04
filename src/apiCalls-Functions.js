@@ -6,12 +6,12 @@
 function getCats(que) {
   return fetch(`https://api.thecatapi.com/v1/images/${que}`, {
     method: "GET",
-    cors: "no-cors",
+    // cors: "no-cors",
     
 
   })
     .then((response) => {
-      if (!response.ok) {
+      if (!response.status >= 400) {
         throw new Error('Server communication is not ready Meow.');
       }
       return response.json();
@@ -19,10 +19,12 @@ function getCats(que) {
 }
 
 function malformedCats(data) {
-  return data.filter((cat)=>  cat.id && cat.url && cat.breeds)
+  console.log('the data unfiltered', data)
+  return data.filter((cat)=> typeof(cat.id) === 'string' && typeof cat.url === 'string' && Array.isArray(cat.breeds) && cat.breeds.every(breed => breed.hasOwnProperty('name')))
 }
 
 function mapCats(data) {
+  console.log('the data unfiltered origin', data)
   return data.map((cat) => getCats(`${cat.id}`))
 } 
 

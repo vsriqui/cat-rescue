@@ -11,7 +11,7 @@ function getCats(que) {
 
   })
     .then((response) => {
-      if (!response.ok) {
+      if (!response.status >= 400) {
         throw new Error('Server communication is not ready Meow.');
       }
       return response.json();
@@ -19,11 +19,13 @@ function getCats(que) {
 }
 
 function malformedCats(data) {
+  console.log('the data unfiltered', data)
   return data.filter((cat)=> typeof(cat.id) === 'string' && typeof cat.url === 'string' && Array.isArray(cat.breeds) && cat.breeds.every(breed => breed.hasOwnProperty('name')))
 }
 
 function mapCats(data) {
-  return data.map((cat) => getCats(`a${cat.id}`))
+  console.log('the data unfiltered origin', data)
+  return data.map((cat) => getCats(`${cat.id}`))
 } 
 
 export {getCats, malformedCats, mapCats}

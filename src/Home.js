@@ -5,12 +5,7 @@ import { useState } from 'react';
 // import { useSearchParams } from 'react-router-dom';
 
 function Home({cats, breedState, handleKittyChange}) {
-  
-
-
-
-
-
+  // console.log(cats)
   return (
     <div className='all'>
       <nav>

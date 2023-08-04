@@ -6,7 +6,7 @@
 function getCats(que) {
   return fetch(`https://api.thecatapi.com/v1/images/${que}`, {
     method: "GET",
-    cors: "no-cors",
+    // cors: "no-cors",
     
 
   })

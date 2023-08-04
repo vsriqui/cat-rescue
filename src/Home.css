@@ -2,7 +2,11 @@ nav {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 25vh;
+  min-height: 25vh;
+  background-color: lavender;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border: 1px groove rgb(192, 50, 189);
 }
 
 main {

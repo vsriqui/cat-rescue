@@ -9,12 +9,21 @@
   margin: 1%;
   font-size: medium;
   border-radius: 20%;
+  border: 1px groove rgb(192, 50, 189);
+
 }
 
 img {
-  border-radius: 80%;
-  max-width: 98%;
-  max-height: 98%;
-  object-fit: contain;
+  border-radius: 40%;
+  max-width: 95%;
+  min-width: 95%;
+  max-height: 95%;
+  min-height: 95%;
+  object-fit:inherit;
   overflow: hidden;
+}
+
+h2 {
+  text-align: center;
+  
 }

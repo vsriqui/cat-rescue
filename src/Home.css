@@ -1,0 +1,23 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 25vh;
+}
+
+main {
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.all {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  width: 20vw;
+}

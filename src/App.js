@@ -45,17 +45,14 @@ function App() {
     fetchCats(); 
   }, []);
 
-  // if (error) {
-  //   console.log('aaaaaa', error)
-  //   return <Error error={error} />;
-  // }
-
   return (
     <Routes>
       { !error && <Route path='/' element={<Home cats={cats} breedState={breedState} handleKittyChange={handleKittyChange} whiskerHunt={whiskerHunt} />} />}
       <Route path='/:id' element={<CatInfo catInfo={catInfo}/>} />
       <Route path='*' element={<Error error={error}/>}/>
+      
     </Routes>
+    
   );
 }
 

@@ -15,7 +15,7 @@ function Card({cats, breeds, url, id, whiskerHunt}) {
     <Link to={`/${id}`} onClick={handleWhiskerHunt}>
     <div className='catainer'>
       <div className='cat' >
-        <img src={url} alt='A lovely feline.'></img>
+        <img src={url} alt='A lovely feline.' />
       </div>
       <h2> {breedNames} </h2>
     </div>

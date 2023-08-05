@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Home page should have proper, elements, nested containments, attributes, and text.', () => {
   it('Nav should have proper elements and attributes', () => {
     cy.intercept("GET", 'https://api.thecatapi.com/v1/images/search?limit=10&has_breeds=1&order=DESC&api_key=sNw9kk1ppt2nofxJ8GLOdkJzKycbk6iOmsQsydl8v4rRmaPkXomMGWamZwmhkH4y', {
       statusCode: 200,
@@ -77,6 +77,7 @@ describe('template spec', () => {
     })
     .as('OhTkBTPnD')
 
+    
     cy.visit('http://localhost:3000/')
     cy.wait(['@images', '@mZZzMlywy', '@fhYh2PDcC', '@OhTkBTPnD'])
     cy.get('#root')

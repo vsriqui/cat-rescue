@@ -13,11 +13,17 @@ function Cards({ cats, breedState, whiskerHunt}) {
     <Card key={cat.id} id={cat.id} url={cat.url} breeds={cat.breeds} whiskerHunt={whiskerHunt} cats={cats}/>
   ));
 
+ 
   return (
     <div className="cats">
-      {catsMap}
+      {washCats.length > 0 && catsMap}
+      {!washCats.length && breedState !== '' && <h2 className='cuery'>Your cat query is questionable.</h2>}
     </div>
   );
+
+  
+
+
 }
 
 

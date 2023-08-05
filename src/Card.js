@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 
 import './Card.css';
+import PropTypes from 'prop-types';
+
+
 
 function Card({cats, breeds, url, id, whiskerHunt}) {
 
@@ -9,10 +12,11 @@ function Card({cats, breeds, url, id, whiskerHunt}) {
     whiskerHunt(cats, id);
   };
 
-  // const catNames = require('cat-names')
+ 
   const breedNames = breeds.map(breed => breed.name).join('. ')
+
   return (
-    <Link to={`/${id}`} onClick={handleWhiskerHunt}>
+    <Link to={`id/${id}`} onClick={handleWhiskerHunt}>
     <div className='catainer'>
       <div className='cat' >
         <img src={url} alt='A lovely feline.' />
@@ -23,6 +27,13 @@ function Card({cats, breeds, url, id, whiskerHunt}) {
   )
 }
 
-// '<h2>{catNames.random()}</h2>'
+Card.propTypes = {
+  whiskerHunt: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  breeds: PropTypes.array.isRequired,
+  cats: PropTypes.array.isRequired
+
+};
 
 export default Card;

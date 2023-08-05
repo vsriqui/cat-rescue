@@ -1,8 +1,8 @@
 import './BreedCard.css';
+import PropTypes from 'prop-types';
 
-function BreedCard({id, name, description, origin, adaptability, affection, intelligence, dog, energy, social, life_span}) {
 
-  console.log(name)
+function BreedCard({name, description, origin, adaptability, affection, intelligence, dog, energy, social, life_span}) {
 
   return (
     <div >
@@ -32,9 +32,18 @@ function BreedCard({id, name, description, origin, adaptability, affection, inte
 }
 
 
+BreedCard.propTypes = {
+  
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  origin: PropTypes.string.isRequired,
+  adaptability: PropTypes.number.isRequired,
+  affection: PropTypes.number.isRequired,
+  intelligence: PropTypes.number.isRequired,
+  dog: PropTypes.number.isRequired,
+  energy: PropTypes.number.isRequired,
+  social: PropTypes.number.isRequired,
+  life_span: PropTypes.string.isRequired
+};
 
 export default BreedCard;
-
-
-
-{/* <BreedCard key={cat.id} name={cat.name} description={cat.description} origin={cat.origin} adaptability={cat.adaptability} affection={cat.affection_level} intelligence={cat.intelligence} dog={cat.dog_friendly} energy={cat.energy_level} social={cat.social_needs} life_span={cat.life_span}/> */}

@@ -1,14 +1,23 @@
+import HomeButton from './Button'
+import PropTypes from 'prop-types';
 
 
 function Error({error}) {
-  console.log(error, 'zzz')
+
+  let displayedError = error || 'These are not the cats you\'re looking for.'
+
   return (
-    error ?
-    <h2>{ error }</h2>
-    :
-    <h2> 'These are not the cats you\'re looking for.' </h2>
+    
+    <div>
+      <HomeButton />
+      <h2>{ displayedError }</h2>
+    </div>
+   
   )
 } 
 
+Error.propTypes = {
+  error: PropTypes.string.isRequired
+};
 
 export default Error

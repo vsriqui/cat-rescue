@@ -1,5 +1,7 @@
 import './Cards.css';
 import Card from './Card'
+import PropTypes from 'prop-types';
+
 
 function Cards({ cats, breedState, whiskerHunt}) {
 
@@ -18,5 +20,11 @@ function Cards({ cats, breedState, whiskerHunt}) {
   );
 }
 
+
+Cards.propTypes = {
+  whiskerHunt: PropTypes.func.isRequired,
+  breedState: PropTypes.string.isRequired,
+  cats: PropTypes.array.isRequired
+};
 
 export default Cards;

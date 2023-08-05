@@ -2,7 +2,8 @@ import BreedCard from './BreedCard'
 
 
 function CatInfo({catInfo}) {
-    console.log(catInfo, 'IHATEMYLIFEEEEEEEEEEEEEEEEEEE')
+    
+    
     const breedMap = catInfo.breeds.map((cat, i) => (
        <BreedCard key={i} name={cat.name} description={cat.description} origin={cat.origin} adaptability={cat.adaptability} affection={cat.affection_level} intelligence={cat.intelligence} dog={cat.dog_friendly} energy={cat.energy_level} social={cat.social_needs} life_span={cat.life_span}/>
     ));
@@ -22,3 +23,13 @@ function CatInfo({catInfo}) {
 
 
 export default CatInfo;
+
+
+
+
+
+
+
+
+
+

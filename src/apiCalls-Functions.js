@@ -11,7 +11,7 @@ function getCats(que) {
 
   })
     .then((response) => {
-      if (response.status >= 400) {
+      if (response.status >= 400 || !response.ok) {
         throw new Error('Server communication is not ready Meow.');
       }
       return response.json();

@@ -7,23 +7,23 @@ function BreedCard({name, description, origin, adaptability, affection, intellig
   return (
     <div >
       <h3>Breed: {name}</h3>
-      <p>{description}</p>
-      <h3>Origin: {origin}</h3>
+      { description && <p>{description}</p> }
+      {origin && <h3>Origin: {origin}</h3> }
       <div className='catstats'>
         <div>
-          <h4>Adaptability: {adaptability}/5</h4>
+          {adaptability && <h4>Adaptability: {adaptability}/5</h4> }
         </div><div>
-          <h4>Affection: {affection}/5</h4>
+          {affection && <h4>Affection: {affection}/5</h4> }
         </div><div>
-          <h4>Intelligence: {intelligence}/5</h4>
+          {intelligence && <h4>Intelligence: {intelligence}/5</h4> }
         </div><div>
-          <h4>Dog Friendly?: {dog}/5</h4>
+          {dog && <h4>Dog Friendly?: {dog}/5</h4> }
         </div><div>
-          <h4>Energy: {energy}/5</h4>
+          {energy && <h4>Energy: {energy}/5</h4> }
         </div><div>
-          <h4>Socialability: {social}/5</h4>
+          {social && <h4>Socialability: {social}/5</h4> }
         </div><div>
-          <h4>Average lifespan: {life_span}</h4>
+          {life_span && <h4>Average lifespan: {life_span}</h4> }
         </div>
       </div>
     </div>

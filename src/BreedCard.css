@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   background-color: lavender;
+  justify-content: center;
+  align-items: center;
 }
 
 div {

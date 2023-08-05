@@ -1,0 +1,9 @@
+.catstats {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: lavender;
+}
+
+div {
+  margin: 1%;
+}

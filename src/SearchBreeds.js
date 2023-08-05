@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import './SearchBreed.css'
-
-
+import PropTypes from 'prop-types';
 
 const SearchBreed = ({handleKittyChange, breedState}) => {
 
@@ -33,3 +31,8 @@ const SearchBreed = ({handleKittyChange, breedState}) => {
 };
 
 export default SearchBreed;
+
+SearchBreed.propTypes = {
+  handleKittyChange: PropTypes.func.isRequired,
+  breedState: PropTypes.string.isRequired
+};

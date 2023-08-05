@@ -2,7 +2,7 @@ import BreedCard from './BreedCard'
 import HomeButton from './Button';
 import {useNavigate } from 'react-router-dom'
 import { useEffect } from 'react';
-
+import './CatInfo.css'
 import PropTypes from 'prop-types';
 
 
@@ -14,7 +14,7 @@ function CatInfo({catInfo}) {
     if (!catInfo.breeds) {
       navigate('/');
     }
-  }, [navigate])
+  }, [navigate, catInfo.breeds])
 
   if (catInfo.breeds) {
     const breedMap = catInfo.breeds.map((cat, i) => (

@@ -1,3 +1,8 @@
+// https://api.thecatapi.com/v1/images/search?limit=10&has_breeds=1&order=DESC&api_key=sNw9kk1ppt2nofxJ8GLOdkJzKycbk6iOmsQsydl8v4rRmaPkXomMGWamZwmhkH4y
+
+// https://api.thecatapi.com/v1/images/
+
+
 function getCats(que) {
   return fetch(`https://api.thecatapi.com/v1/images/${que}`, {
     method: "GET",
@@ -19,7 +24,7 @@ function malformedCats(data) {
 }
 
 function mapCats(data) {
-
+  console.log('the data unfiltered origin', data)
   return data.map((cat) => getCats(`${cat.id}`))
 } 
 

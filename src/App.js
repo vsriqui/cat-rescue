@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     const fetchCats = () => {
-      getCats('search?limit=10&has_breeds=1&order=RAND&api_key=sNw9kk1ppt2nofxJ8GLOdkJzKycbk6iOmsQsydl8v4rRmaPkXomMGWamZwmhkH4y')
+      getCats('search?limit=10&has_breeds=1&order=DESC&api_key=sNw9kk1ppt2nofxJ8GLOdkJzKycbk6iOmsQsydl8v4rRmaPkXomMGWamZwmhkH4y')
         .then((bigMeow) => Promise.all(mapCats(bigMeow)))
         .then((catData) => malformedCats(catData))
         .then((catData) => {

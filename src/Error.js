@@ -9,7 +9,7 @@ function Error({error}) {
   return (
     
     <div>
-      <HomeButton />
+      {!error && <HomeButton />}
       <h2>{ displayedError }</h2>
     </div>
    

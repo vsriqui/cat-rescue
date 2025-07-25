@@ -23,6 +23,6 @@ To see tests, `npm i -D install` for installation and run `npm run cypress` in y
 
 ## Contributing
 
-Victor Sriqui:
+Victor S:
 [GitHub](https://github.com/vsriqui)
 [LinkedIn](https://turingschool.slack.com/archives/C05HRR6QES1/p1690658527589989)
